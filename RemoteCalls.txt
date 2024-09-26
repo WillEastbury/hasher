@@ -1,0 +1,7 @@
+Arbiter         POST    /registerPartitionOwnership/{address}   [FromRoute] string address, [FromBody]List<string> partitions
+Arbiter         GET     /getPartitions                          Dictionary<string, string>
+
+FrontendRouter  POST    /search                                [FromBody]List<string> request
+
+Store           POST    /HashBatchLocal                         [FromBody]List<string> request
+

@@ -1,0 +1,50 @@
+##### Send Get Partition Request to get all partitions from the arbiter service
+GET https://wepaddemo1arbiter.azurewebsites.net/getPartitions
+
+##### Search for Hash across all registered partitions
+POST https://wepaddemo1frontend.azurewebsites.net/search
+Accept: application/json
+Content-Type: application/json
+
+["01c454ea0dcfcd0d255b06505e89f0d712e68c62", "006f0477fc5ac8dd3fbca8386413a1e2ab3341d5"]
+
+######
+GET https://wepaddemo1arbiter.azurewebsites.net/
+
+#######
+GET https://wepaddemo1frontend.azurewebsites.net
+
+#######
+POST https://wepaddemo1store0-63.azurewebsites.net/HashBatchLocal
+Accept: application/json
+Content-Type: application/json
+
+["01c454ea0dcfcd0d255b06505e89f0d712e68c62", "006f0477fc5ac8dd3fbca8386413a1e2ab3341d5"]
+
+#######
+POST https://wepaddemo1store0-63.azurewebsites.net/HashBatchLocal
+Accept: application/json
+Content-Type: application/json
+
+["01c454ea0dcfcd0d255b06505e89f0d712e68c62"]
+
+#######
+POST https://wepaddemo1store0-63.azurewebsites.net/HashBatchLocal
+Accept: application/json
+Content-Type: application/json
+
+["006f0477fc5ac8dd3fbca8386413a1e2ab3341d5"]
+
+#######
+POST https://wepaddemo1store128-191.azurewebsites.net/HashBatchLocal
+Accept: application/json
+Content-Type: application/json
+
+["01c454ea0dcfcd0d255b06505e89f0d712e68c62", "006f0477fc5ac8dd3fbca8386413a1e2ab3341d5"]
+
+#######
+POST https://wepaddemo1store192-255.azurewebsites.net/HashBatchLocal
+Accept: application/json
+Content-Type: application/json
+
+["01c454ea0dcfcd0d255b06505e89f0d712e68c62", "006f0477fc5ac8dd3fbca8386413a1e2ab3341d5"]
